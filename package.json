@@ -1,0 +1,36 @@
+{
+  "name": "jade-static-brunch",
+  "version": "1.8.0",
+  "description": "Adds static Jade support to brunch.",
+  "author": {
+    "name": "Stephen Hutchings",
+    "url": "http://s-ings.com/"
+  },
+  "homepage": "https://github.com/stephenhutchings/jade-static-brunch",
+  "keywords": [
+    "brunchplugin",
+    "jade",
+    "static",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:stephenhutchings/jade-static-brunch.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "jade": "~1.2.0",
+    "mkdirp": "^0.5.0",
+    "progeny": "~0.2.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.1",
+    "chai": "~1.8.1"
+  },
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/stephenhutchings/jade-static-brunch/issues"
+  }
+}
