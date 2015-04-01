@@ -16,7 +16,7 @@ Or, do manual install:
 
 ## Options
 
-```
+```coffee-script
 exports.config =
   plugins:
     jadeStatic:
@@ -28,7 +28,7 @@ exports.config =
 
 For example...
 
-```
+```coffee-script
 formatPath: (path) -> path.match(/^app(\/|\\)static(\/|\\)(.+)\.jade$/)[3]
 ```
 
