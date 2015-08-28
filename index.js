@@ -41,7 +41,7 @@ JadeCompiler.prototype.extension = 'jade';
 
 JadeCompiler.prototype.compile = function(data, filepath, callback) {
   var options = clone(this.options);
-  var html, result, buildPath, buildDir;
+  var html, buildPath, buildDir;
 
   buildPath = this.buildPath(filepath);
   buildDir = sysPath.dirname(buildPath);
@@ -56,11 +56,11 @@ JadeCompiler.prototype.compile = function(data, filepath, callback) {
         callback(err, null);
       } else {
         fs.writeFileSync(buildPath, html);
-        callback(err, result);
+        callback(null, '');
       }
     });
   } catch (err) {
-    callback(err, result);
+    callback(err, null);
   }
 };
 
