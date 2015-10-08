@@ -4,6 +4,11 @@ var mkdirp = require('mkdirp');
 var progeny = require('progeny');
 var sysPath = require('path');
 
+var FileQueue = require('filequeue');
+var fq = new FileQueue(100);
+fs = fq;
+
+
 // perform a deep cloning of an object
 function clone(obj) {
   if (null == obj || "object" != typeof obj) return obj;
@@ -55,7 +60,7 @@ JadeCompiler.prototype.compile = function(data, filepath, callback) {
       if (err) {
         callback(err, null);
       } else {
-        fs.writeFileSync(buildPath, html);
+        fs.writeFile(buildPath, html);
         callback(null, '');
       }
     });

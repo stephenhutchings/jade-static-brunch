@@ -21,7 +21,8 @@
     "test": "mocha"
   },
   "dependencies": {
-    "jade": "~1.2.0",
+    "jade": "git://github.com/ceremcem/jade.git",
+    "filequeue": "^0.5.0",
     "mkdirp": "^0.5.0",
     "progeny": "~0.2.1"
   },
