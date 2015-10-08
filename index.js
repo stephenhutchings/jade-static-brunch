@@ -7,7 +7,8 @@ var sysPath = require('path');
 var FileQueue = require('filequeue');
 var fq = new FileQueue(100);
 fs = fq;
-
+fs.writeFileSync = fs.writeFile
+fs.readFileSync = fs.readFile 
 
 // perform a deep cloning of an object
 function clone(obj) {
@@ -60,7 +61,7 @@ JadeCompiler.prototype.compile = function(data, filepath, callback) {
       if (err) {
         callback(err, null);
       } else {
-        fs.writeFile(buildPath, html);
+        fs.writeFileSync(buildPath, html);
         callback(null, '');
       }
     });
