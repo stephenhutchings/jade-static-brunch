@@ -4,6 +4,12 @@ var mkdirp = require('mkdirp');
 var progeny = require('progeny');
 var sysPath = require('path');
 
+var FileQueue = require('filequeue');
+var fq = new FileQueue(100);
+fs = fq;
+fs.writeFileSync = fs.writeFile
+fs.readFileSync = fs.readFile 
+
 // perform a deep cloning of an object
 function clone(obj) {
   if (null == obj || "object" != typeof obj) return obj;
