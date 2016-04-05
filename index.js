@@ -70,8 +70,4 @@ JadeCompiler.prototype.buildPath = function(path) {
          this.options.extension;
 };
 
-JadeCompiler.prototype.include = [
-  sysPath.join(__dirname, 'node_modules', 'jade', 'runtime.js')
-];
-
 module.exports = JadeCompiler;
